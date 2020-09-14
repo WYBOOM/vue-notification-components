@@ -12,13 +12,15 @@ const wyNotify = options => {
 
   wyNotify.id = id;
   wyNotify.vm = wyNotify.$mount("");
-  wyNotify.vm.visible = true;
-
+  
   wyNotify.dom = wyNotify.vm.$el;
-
-  wyNotify.dom.style.zIndex = nId + 1000;
-
+  
+  wyNotify.vm.visible = true;
+//   wyNotify.dom.style.zIndex = nId + 1000;
   document.body.appendChild(wyNotify.dom);
+  
+  
+  
 
   return wyNotify.vm;
 };

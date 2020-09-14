@@ -1,5 +1,5 @@
 <template>
-  <transition name="wyNotify-fade">
+  <transition name="wyNotify-fade" >
     <div ref="wyNotify"
          class="wyNotify"
          v-if="visible">123123</div>
@@ -11,7 +11,7 @@ export default {
   name: 'wyNotify',
   data () {
     return {
-      visible: true
+      visible: false
     }
   },
   created () {
@@ -31,17 +31,25 @@ export default {
 <style lang="scss" scoped>
 
 .wyNotify-fade-leave-active {
-  transition: all 0.3s ease;
+    animation:bounce-in .5s reverse
 }
 .wyNotify-fade-enter-active{
-    transition: all 0.3s ease;
+  animation:bounce-in .5s  
 }
 .wyNotify-fade-enter, .wyNotify-fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
-  transform: translateX(10px);
-  opacity: 0;
+//   transform: translateX(100px);
+//   opacity: 0;
+}
+@keyframes bounce-in {
+  0% {
+    right: -400px;
+  }
+  100% {
+    right: 10px;
+  }
 }
 .wyNotify {
-  position: absolute;
+  position: fixed;
   top: 10px;
   right: 10px;
 
