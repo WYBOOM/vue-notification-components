@@ -37,8 +37,8 @@ export default {
       duration: 4000,
       showClose: false,
       iconSrc: '',
-      onClose: null,
-      onClick: null
+      onClose: ()=>{},
+      onClick: ()=>{}
     }
   },
   mounted () {

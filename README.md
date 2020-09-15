@@ -46,9 +46,43 @@ Vue.use(wyNotify)
 
 - wyNotify
 
+---
+
 ## 组件使用文档
 
 ### wyNotify
 
+> 通知提醒组件
+
+#### 绑定 wyNotify 方法到 Vue 实例原型链上，通过调用`vue.$wyNotify(options)`显示消息。下面是 options 对象的 key。（options 请使用对象类型）
+
+|   键名    |  值类型  | 是否必填 |                   参数作用                    | 默认值 |
+| :-------: | :------: | :------: | :-------------------------------------------: | :----: |
+|   title   |  String  |   选填   |                     标题                      |   无   |
+|  message  |  String  |   选填   |                   消息内容                    |   无   |
+| duration  |  Number  |   选填   | 弹框显示时间，值为 0 时不自动关闭。单位为 ms  |  4000  |
+| showClose | Boolean  |   选填   |               是否显示关闭按钮                | false  |
+|  iconSrc  |  String  |   选填   | 弹框图标（用 require 或 import 引入相对路径） |   无   |
+|  onClose  | Function |   选填   |              消息弹框关闭的回调               |   无   |
+|  onClick  | Function |   选填   |            点击消息弹框触发的事件             |   无   |
+
+```
+this.$wyNotify({
+        duration: 3000,
+        title: '标题',
+        message: '一段文字一段文字一段文字一段文字一段文字一段文字一段文字一段文字',
+        showClose: true,
+        iconSrc: require('../src/assets/蛙.png'),//使用require引入相对路径图片,
+        onClick: function () {
+          console.log('click')
+        },
+        onClose: function () {
+          console.log('leave');
+        }
+      })
+```
+![wyNotify](./src/assets/wyNotify.gif 'wyNotify')
+
+---
 
 For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
