@@ -2,11 +2,14 @@ var path = require('path')
 var webpack = require('webpack')
 
 module.exports = {
-  entry: './src/main.js',
+  entry: './src/lib/index.js',
   output: {
     path: path.resolve(__dirname, './dist'),
     publicPath: '/dist/',
-    filename: 'build.js'
+    filename: 'vue-notification-components.js',
+    library:'vueNotificationComponents',
+    libraryTarget:'umd',
+    umdNamedDefine:true
   },
   module: {
     rules: [
@@ -71,7 +74,8 @@ module.exports = {
   },
   resolve: {
     alias: {
-      'vue$': 'vue/dist/vue.esm.js'
+      'vue$': 'vue/dist/vue.esm.js',
+      '#':'./src/lib'
     },
     extensions: ['*', '.js', '.vue', '.json']
   },

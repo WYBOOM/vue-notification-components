@@ -1,0 +1,6 @@
+// 单行文字超出部分省略
+@mixin oneRowTestEllipsis {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}

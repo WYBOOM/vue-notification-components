@@ -5,6 +5,7 @@
   "author": "wyboom",
   "license": "MIT",
   "private": false,
+  "main": "dist/vue-notification-components.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/WYBOOM/vue-notification-components"
