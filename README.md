@@ -81,7 +81,7 @@ this.$wyNotify({
         }
       })
 ```
-![wyNotify](./src/assets/wyNotify.gif 'wyNotify')
+![wyNotify](https://github.com/WYBOOM/vue-notification-components/blob/master/src/assets/wyNotify.gif 'wyNotify')
 
 ---
 
