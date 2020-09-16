@@ -1,7 +1,8 @@
 import test from "./components/test/index";
 import wyNotify from "./components/wyNotify/index";
+import wyMessage from "./components/wyMessage/index";
 
-const components = [test, wyNotify];
+const components = [test, wyNotify,wyMessage];
 
 const install = function(Vue, opts = {}) {
   components.forEach(component => {
@@ -20,5 +21,6 @@ export default {
 
   //按需引入
   test,
-  wyNotify
+  wyNotify,
+  wyMessage
 };

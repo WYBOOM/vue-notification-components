@@ -115,7 +115,7 @@ export default {
 
   border: 1px solid #faf8f8;
   border-radius: 8px;
-  box-shadow: 0px 0px 7px rgb(173, 161, 161);
+  box-shadow: 0px 0px 7px rgba(0, 0, 0,.2);
 
   background-color: #faf8f8;
   opacity: 0.95;

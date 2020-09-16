@@ -1,6 +1,9 @@
 <template>
   <div id="app">
-    <div @click="testWyNotify">测试 wyNotify 弹框</div>
+    <div class="test"
+         @click="testWyNotify">测试 wyNotify 弹框</div>
+    <div class="test"
+         @click="testwyMessage">测试 wyMessage 消息</div>
   </div>
 </template>
 
@@ -20,6 +23,21 @@ export default {
         message: '一段文字一段文字一段文字一段文字一段文字一段文字一段文字一段文字',
         showClose: true,
         iconSrc: require('../src/assets/蛙.png'),//使用require引入相对路径图片,
+        onClick: function () {
+          console.log('click')
+        },
+        onClose: function () {
+          console.log('leave');
+        }
+      })
+    },
+
+    testwyMessage () {
+      this.$wyMessage({
+        type: 'info',
+        duration: 3000,
+        message: '一段文字一段文字一段文字一段文字一段文字一段文字一段文字一段文字',
+        showClose: true,
         onClick: function () {
           console.log('click')
         },
@@ -60,5 +78,9 @@ li {
 
 a {
   color: #42b983;
+}
+
+.test {
+  margin-bottom: 100px;
 }
 </style>

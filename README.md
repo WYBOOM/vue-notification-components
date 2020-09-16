@@ -45,6 +45,7 @@ Vue.use(wyNotify)
 ## 组件列表
 
 - wyNotify
+- wyMessage
 
 ---
 
@@ -81,8 +82,22 @@ this.$wyNotify({
         }
       })
 ```
-![wyNotify](https://github.com/WYBOOM/vue-notification-components/blob/master/src/assets/wyNotify.gif 'wyNotify')
+
+![wyNotify](https://github.com/WYBOOM/vue-notification-components/blob/master/src/assets/wyNotify.gif "wyNotify")
 
 ---
+
+### wyMessage
+
+> 消息提示 使用方法与 wyNotify 类似。
+
+|   键名    |  值类型  | 是否必填 |                            参数作用                             | 默认值 |
+| :-------: | :------: | :------: | :-------------------------------------------------------------: | :----: |
+|  message  |  String  |   选填   |                            消息内容                             |   无   |
+| duration  |  Number  |   选填   |          弹框显示时间，值为 0 时不自动关闭。单位为 ms           |  4000  |
+| showClose | Boolean  |   选填   |                        是否显示关闭按钮                         | false  |
+|   type    |  String  |   选填   | 消息弹框的类型，可选值（info/success/error）,不填或填错取默认值 | 'info' |
+|  onClose  | Function |   选填   |                       消息弹框关闭的回调                        |   无   |
+|  onClick  | Function |   选填   |                     点击消息弹框触发的事件                      |   无   |
 
 For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).

@@ -1,9 +1,10 @@
 var path = require("path");
 var webpack = require("webpack");
+var htmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  //   entry: "./src/lib/index.js",
-  entry: "./src/main.js",
+  entry: "./src/lib/index.js",
+  //   entry: "./src/main.js",
   output: {
     path: path.resolve(__dirname, "./dist"),
     publicPath: "/dist/",
